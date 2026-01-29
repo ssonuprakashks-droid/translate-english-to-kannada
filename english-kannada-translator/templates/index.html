@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}English to Kannada Translator{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Enter English Text to Translate</h2>
+    <form action="{{ url_for('translate_route') }}" method="POST">
+        <textarea name="english_text" rows="6" placeholder="Enter English text here..." required></textarea>
+        <button type="submit">Translate to Kannada</button>
+    </form>
+</div>
+{% endblock %}
